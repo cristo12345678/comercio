@@ -1,0 +1,102 @@
+<html>
+  <head>
+    <title>LONCHERIA</title>
+    <link rel="stylesheet" href="estilos.css">
+  </head>
+  <body>
+    <CEnter>
+    <Nav class="navbar">
+      <a href="pagina1.html">Catalogo</a>
+    </Nav>
+    </CEnter>
+    <br><br><br><br><br>
+    <div class="card">
+    <img src="B1.jpeg" width="100px" height="100px">
+    <div class="card-content">
+      <div class="card-title">COCA COLA 300ml R</div>
+      <div class="card-description">
+        $12
+        <br>
+        <button class="boton" onclick="agregarAlCarrito('COCA COLA 300ml R')">Agregar al carrito</button>
+      </div>
+    </div>
+    </div>
+    <br><br>
+
+    <div class="card">
+    <img src="B2.jpeg" width="100px" height="100px">
+    <div class="card-content">
+      <div class="card-title">COCA COLA 450ml R</div>
+      <div class="card-description">
+        $17
+        <br>
+        <button class="boton" onclick="agregarAlCarrito('COCA COLA 450ml R')">Agregar al carrito</button>
+      </div>
+    </div>
+    </div>
+    <br><br>
+
+    <div class="card">
+    <img src="B3.jpeg" width="100px" height="100px">
+    <div class="card-content">
+      <div class="card-title">COCA COLA 500ml V</div>
+      <div class="card-description">
+        $16
+        <br>
+        <button class="boton" onclick="agregarAlCarrito('COCA COLA 500ml V')">Agregar al carrito</button>
+      </div>
+    </div>
+    </div>
+    <br><br>
+
+    <div class="card">
+    <img src="B4.jpeg" width="100px" height="100px">
+    <div class="card-content">
+      <div class="card-title">SPRITE 500ml V</div>
+      <div class="card-description">
+        $16
+        <br>
+        <button class="boton" onclick="agregarAlCarrito('SPRITE 500ml V')">Agregar al carrito</button>
+      </div>
+    </div>
+    </div>
+    <br><br>
+
+    <div class="card">
+    <img src="B5.jpeg" width="100px" height="100px">
+    <div class="card-content">
+      <div class="card-title">FANTA 500ml V</div>
+      <div class="card-description">
+        $15
+        <br>
+        <button class="boton" onclick="agregarAlCarrito('FANTA 500ml V')">Agregar al carrito</button>
+      </div>
+    </div>
+    </div>
+    <br><br>
+
+
+    <div class="carrito">
+      <h2>Carrito</h2>
+      <div class="contador">Productos en el carrito: <span id="cantidad">0</span></div>
+      <ul id="listaCarrito"></ul>
+    </div>
+    <script>
+      let cantidad = 0;
+      const listaCarrito = document.getElementById("listaCarrito");
+      const cantidadSpan = document.getElementById("cantidad");
+
+      function agregarAlCarrito(producto) {
+      cantidad++;
+      cantidadSpan.textContent = cantidad;
+
+      const li = document.createElement("li");
+      li.textContent = producto;
+      listaCarrito.appendChild(li);
+    }
+    </script>
+    <footer>
+      <span id="contador"></span>
+    </footer>
+  </body>
+</html>

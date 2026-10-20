@@ -1,0 +1,136 @@
+<html>
+  <head>
+    <title>LONCHERIA</title>
+    <link rel="stylesheet" href="estilos.css">
+  </head>
+  <body>
+    <CEnter>
+    <Nav class="navbar">
+      <a href="pagina1.html">Catalogo</a>
+    </Nav>
+    </CEnter>
+    <br><br><br><br><br>
+    <div class="card">
+    <img src="L1.jpeg" width="100px" height="100px">
+    <div class="card-content">
+      <div class="card-title">COMIDA CHINA <br>(SABADO)</div>
+      <div class="card-description">
+        Spagueti + 1 guiso $95
+        Spagueti + 2 guiso $120
+        <br><br>
+        Guisos: <br> Carne con vegetales. <br>
+                Pollo agridulce.
+        <br>
+        <button class="boton" onclick="agregarAlCarrito('COMIDA CHINA')">Agregar al carrito</button>
+      </div>
+    </div>
+    </div>
+    <br><br>
+
+    <div class="card">
+    <img src="L2.jpeg" width="100px" height="100px">
+    <div class="card-content">
+      <div class="card-title">ORDEN BARBACOA <br>(SABADO Y LUNES)</div>
+      <div class="card-description">
+        $80
+        <br>
+        <button class="boton" onclick="agregarAlCarrito('ORDEN BARBACOA')">Agregar al carrito</button>
+      </div>
+    </div>
+    </div>
+    <br><br>
+
+    <div class="card">
+    <img src="L3.jpeg" width="100px" height="100px">
+    <div class="card-content">
+      <div class="card-title">TACO BARBACOA <br>(SABADO Y LUNES)</div>
+      <div class="card-description">
+        $15
+        <br>
+        <button class="boton" onclick="agregarAlCarrito('TACO BARBACOA')">Agregar al carrito</button>
+      </div>
+    </div>
+    </div>
+    <br><br>
+
+    <div class="card">
+    <img src="L4.jpeg" width="100px" height="100px">
+    <div class="card-content">
+      <div class="card-title">TORTA CUBANA <br>(LUNES A SABADO)</div>
+      <div class="card-description">
+        $60
+        <br>
+        <button class="boton" onclick="agregarAlCarrito('TORTA CUBANA')">Agregar al carrito</button>
+      </div>
+    </div>
+    </div>
+    <br><br>
+
+    <div class="card">
+    <img src="L5.jpeg" width="100px" height="100px">
+    <div class="card-content">
+      <div class="card-title">HUARACHE <br>(LUNES A SABADO)</div>
+      <div class="card-description">
+        $35
+        <br>
+        <button class="boton" onclick="agregarAlCarrito('HUARACHE')">Agregar al carrito</button>
+      </div>
+    </div>
+    </div>
+    <br><br>
+
+    <div class="card">
+    <img src="L6.jpeg" width="100px" height="100px">
+    <div class="card-content">
+      <div class="card-title">TACO ADOBADA <br>(LUNES A SABADO)</div>
+      <div class="card-description">
+        $12
+        <br>
+        <button class="boton" onclick="agregarAlCarrito('TACO ADOBADA')">Agregar al carrito</button>
+      </div>
+    </div>
+    </div>
+    <br><br>
+
+    <div class="card">
+    <img src="L7.jpeg" width="100px" height="100px">
+    <div class="card-content">
+      <div class="card-title">QUESADILLA <br>(LUNES A SABADO)</div>
+      <div class="card-description">
+        $50
+        <br>
+        <button class="boton" onclick="agregarAlCarrito('QUESADILLA')">Agregar al carrito</button>
+      </div>
+    </div>
+    </div>
+    <br><br>
+
+
+
+    <div class="carrito">
+      <h2>Carrito</h2>
+      <div class="contador">Productos en el carrito: <span id="cantidad">0</span></div>
+      <ul id="listaCarrito"></ul>
+    </div>
+    <script>
+      let cantidad = 0;
+      const listaCarrito = document.getElementById("listaCarrito");
+      const cantidadSpan = document.getElementById("cantidad");
+
+      function agregarAlCarrito(producto) {
+      cantidad++;
+      cantidadSpan.textContent = cantidad;
+
+      const li = document.createElement("li");
+      li.textContent = producto;
+      listaCarrito.appendChild(li);
+    }
+    </script>
+    <footer>
+      <span id="contador"></span>
+    </footer>
+
+   
+
+  </body>
+</html>
